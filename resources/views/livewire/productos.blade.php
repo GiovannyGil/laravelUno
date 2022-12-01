@@ -29,10 +29,10 @@
             <td class="border px-4 py2">{{$producto->nombre}}</td>
             <td class="border px-4 py2">{{$producto->cantidad}}</td>
             <td class="border px-4 py2">{{$producto->precio}}</td>
-                <td class="border px-4 py-2 text-center">
+            <td class="border px-4 py-2 text-center">
                     <button wire:click="editar({{$producto->id}})"class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4  my3 rounded-md">Edit</button>
                     <button wire:click="borrar({{$producto->id}})"class="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4  my3 rounded-md">Delete</button>
-                </td>
+            </td>
         </tr>   
         @endforeach
 
