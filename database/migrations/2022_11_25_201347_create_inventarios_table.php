@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('Nombre');
             $table->string('Cantidad');
             $table->string('Subtotal');
-            $table->string('total');
+            $table->string('Total');
             $table->timestamps();
         });
     }

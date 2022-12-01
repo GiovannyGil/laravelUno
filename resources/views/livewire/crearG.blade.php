@@ -12,21 +12,21 @@
             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                 <div class="mb-4">
                     <label for="nombre" class="block text-gray-700 text-sm font-bold mb-2">Nombre:</label>
-                    <input type="text" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="nombre" wire:model="nombre">
+                    <input type="text" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="nombre" wire:model="Nombre">
                 </div>
 
                 <div class="mb-4">
-                    <label for="cantidad" class="block text-gray-700 text-sm font-bold mb-2">Cantidad:</label>
-                    <input type="number" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="cantidad" wire:model="cantidad">
+                    <label for="genero" class="block text-gray-700 text-sm font-bold mb-2">Genero:</label>
+                    <input type="text" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="genero" wire:model="Genero">
                 </div>
                 <div class="mb-4">
-                    <label for="precio" class="block text-gray-700 text-sm font-bold mb-2">Precio:</label>
-                    <input type="text" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="precio" wire:model="precio">
+                    <label for="categoria" class="block text-gray-700 text-sm font-bold mb-2">Categoria:</label>
+                    <input type="text" class="shadow apparence-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-one focus:shadow-outline" id="categoria" wire:model="Categoria">
                 </div>
 
                 <div class="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
                     <span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
-                    <button wire:click="guardar()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm-text-sm sm:leaning-5">Guardar</button>
+                        <button wire:click="guardar()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm-text-sm sm:leaning-5">Guardar</button>
                         <button wire:click="update()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm-text-sm sm:leaning-5">Actualizar</button>
                         <button wire:click="cerrarModal()" type="button" class="inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-purple-600 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm-text-sm sm:leaning-5">Cancelar</button>
 

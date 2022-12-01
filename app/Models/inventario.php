@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class inventario extends Model
 {
     use HasFactory;
-    protected $fillable  = ['Nombre','Cantidad', 'Subtotal','Total'];
+    protected $fillable  = ['Nombre','cantidad', 'subtotal','total'];
 }
