@@ -9,7 +9,10 @@
              
              @if($modal)
                  @include('livewire.crearT')
-             @endif    
+             @endif  
+             @if($modalE)
+                @include('livewire.EditT')
+            @endif   
              <br>
  
  <table  class="table-fixed w-full">

@@ -9,6 +9,7 @@ class Trabajos extends Component
 {
     public $Nombre,$Salario,$Demanda,$Oferta;
     public $modal=false; //cerrar modal
+    public $modalE =false;//cierre modal de edicion
     public function render()
     {
         $this->trabajos = trabajo::all();
@@ -36,6 +37,13 @@ class Trabajos extends Component
         $this->Oferta ='';
     } 
     
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
         //boton editar
         public function editar($id){//llamamos los datos con el id
             $trabajos = trabajo::findOrFail($id);//metodo para llamar el modal y finalizar
@@ -44,7 +52,7 @@ class Trabajos extends Component
             $this->Salario = $trabajos->Salario;
             $this->Demanda = $trabajos->Demanda;
             $this->Oferta = $trabajos->Oferta;
-            $this->abrirModal();
+            $this->abrirModalE();
         } 
 
         public function update(){
@@ -58,7 +66,7 @@ class Trabajos extends Component
                     'Oferta' =>$this->Oferta 
                 ]);
             }
-            $this->cerrarModal();
+            $this->cerrarModalE();
             $this->limpiar();
         }
     

@@ -9,6 +9,7 @@ class Games extends Component
 {
 public $Nombre,$Genero,$Categoria;
 public $modal=false; //cerrar modal
+public $modalE =false;//cierre modal de edicion
 
     
     public function render()
@@ -29,6 +30,13 @@ public $modal=false; //cerrar modal
     public function cerrarModal(){//al darle click se cierra el modal
         $this->modal = false;
     }
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
     public function limpiar(){//limpiar los datos de la tabla
         $this->id ='';
         $this->Nombre ='';
@@ -43,7 +51,7 @@ public $modal=false; //cerrar modal
             $this->Nombre = $games->Nombre;
             $this->Genero = $games->Genero;
             $this->Categoria = $games->Categoria;
-            $this->abrirModal();
+            $this->abrirModalE();
         } 
 
         public function update(){
@@ -56,7 +64,7 @@ public $modal=false; //cerrar modal
                     'Categoria' =>$this->Categoria   
                 ]);
             }
-            $this->cerrarModal();
+            $this->cerrarModalE();
             $this->limpiar();
         }
     

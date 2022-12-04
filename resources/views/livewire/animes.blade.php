@@ -1,5 +1,5 @@
 <x-slot name="header">
-    <center><h1 class="text-gray-900">GESTION DE JUEGOS</h1></center> 
+    <center><h1 class="text-gray-900">GESTION DE ANIMES</h1></center> 
  </x-slot>    
  <div class="py-12">
      <div class="max-w-7x1 mx-auto sm:px6 lg:px-8">
@@ -9,7 +9,10 @@
              
              @if($modal)
                  @include('livewire.crearA')
-             @endif    
+             @endif 
+             @if($modalE)
+                @include('livewire.EditA')
+            @endif   
              <br>
  
  

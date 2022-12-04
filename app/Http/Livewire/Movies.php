@@ -9,6 +9,7 @@ class Movies extends Component
 {
     public $Nombre,$Genero,$Protagonista;
     public $modal=false; //cerrar modal
+    public $modalE =false;//cierre modal de edicion
     public $movies;
     public function render()
     {
@@ -29,6 +30,13 @@ class Movies extends Component
     public function cerrarModal(){//al darle click se cierra el modal
         $this->modal = false;
     }
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
     public function limpiar(){//limpiar los datos de la tabla
         $this->id ='';
         $this->Nombre ='';
@@ -43,7 +51,7 @@ class Movies extends Component
             $this->Nombre = $movies->Nombre;
             $this->Genero = $movies->Genero;
             $this->Protagonista = $movies->Protagonista;
-            $this->abrirModal();
+            $this->abrirModalE();
         } 
 
         public function update(){
@@ -56,7 +64,7 @@ class Movies extends Component
                     'Protagonista' =>$this->Protagonista   
                 ]);
             }
-            $this->cerrarModal();
+            $this->cerrarModalE();
             $this->limpiar();
         }
     

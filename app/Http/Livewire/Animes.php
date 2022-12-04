@@ -9,6 +9,7 @@ class Animes extends Component
 {
     public $Nombre,$Genero,$Categoria,$Temporadas;
     public $modal=false; //cerrar modal
+    public $modalE =false;//cierre modal de edicion
     public function render()
     {
         $this->animes = anime::all();
@@ -28,6 +29,14 @@ class Animes extends Component
     public function cerrarModal(){//al darle click se cierra el modal
         $this->modal = false;
     }
+    
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
     public function limpiar(){//limpiar los datos de la tabla
         $this->id ='';
         $this->Nombre ='';
@@ -44,7 +53,7 @@ class Animes extends Component
             $this->Genero = $animes->Genero;
             $this->Categoria = $animes->Categoria;
             $this->Temporadas = $animes->Temporadas;
-            $this->abrirModal();
+            $this->abrirModalE();
         } 
 
         public function update(){
@@ -58,7 +67,7 @@ class Animes extends Component
                     'Temporadas' =>$this->Temporadas 
                 ]);
             }
-            $this->cerrarModal();
+            $this->cerrarModalE();
             $this->limpiar();
         }
     

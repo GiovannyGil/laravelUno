@@ -9,6 +9,9 @@
             
             @if($modal)
                 @include('livewire.crearP')
+            @endif 
+            @if($modalE)
+                @include('livewire.EditP')
             @endif    
             <br>
 

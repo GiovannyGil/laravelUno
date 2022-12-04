@@ -9,6 +9,7 @@ class Inventarios extends Component
 {
     public $inventarios,$Nombre,$cantidad,$subtotal,$total;
     public $modal=false; //cerrar modal
+    public $modalE =false;//cierre modal de edicion
 
     public function render()
     {
@@ -27,6 +28,13 @@ class Inventarios extends Component
     public function cerrarModal(){//al darle click se cierra el modal
         $this->modal = false;
     }
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
     public function limpiar(){//limpiar los datos de la tabla
         $this->id ='';
         $this->Nombre ='';
@@ -43,7 +51,7 @@ class Inventarios extends Component
             $this->cantidad = $inventarios->cantidad;
             $this->subtotal = $inventarios->subtotal;
             $this->total = $inventarios->total;
-            $this->abrirModal();
+            $this->abrirModalE();
         } 
 
         public function update(){
@@ -57,7 +65,7 @@ class Inventarios extends Component
                     'total' =>$this->total
                 ]);
             }
-            $this->cerrarModal();
+            $this->cerrarModalE();
             $this->limpiar();
         }
     

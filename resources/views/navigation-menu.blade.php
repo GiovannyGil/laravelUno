@@ -6,16 +6,28 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-jet-application-mark class="block h-9 w-auto" />
+                        <x-jet-application-mark class="block h-11 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dashboard') }}
+                        {{ __('inicio') }}
+                    </x-jet-nav-link>
+                    
+                </div>
+                <div class="hidden space-x-10 sm:-my-px sm:ml-20 sm:flex">
+                    <x-jet-nav-link>
+                        <a style="padding: 20px" href="/productos">{{ __('Productos')}}</a>
+                        <a style="padding: 20px" href="/inventarios">{{ __('Invetarios')}}</a>
+                        <a style="padding: 20px" href="/movies">{{ __('Peliculas')}}</a>
+                        <a style="padding: 20px" href="/games">{{ __('Juegos')}}</a>
+                        <a style="padding: 20px" href="/trabajos">{{ __('Trabajos')}}</a>
+                        <a style="padding: 20px" href="/animes">{{ __('Animes')}}</a>
                     </x-jet-nav-link>
                 </div>
+                
             </div>
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
@@ -141,7 +153,6 @@
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>
-
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
             <div class="flex items-center px-4">

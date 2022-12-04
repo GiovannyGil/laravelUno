@@ -11,6 +11,7 @@ class Productos extends Component
 public  $nombre, $cantidad, $precio ;
 
 public $modal =false;//cierre modal
+public $modalE =false;//cierre modal de edicion
 
     public function render()
     {
@@ -28,6 +29,14 @@ public $modal =false;//cierre modal
     public function cerrarModal(){//al darle click se cierra el modal
         $this->modal = false;
     }
+
+    public function abrirModalE(){//al darle clic se abre el modal de edicion
+        $this->modalE = true;
+    }
+    public function cerrarModalE(){//al darle click se cierra el modal de edicion
+        $this->modalE = false;
+    }
+
     public function limpiar(){//limpiar los datos de la tabla
         $this->id ='';
         $this->nombre ='';
@@ -41,7 +50,7 @@ public $modal =false;//cierre modal
         $this->nombre = $producto->nombre;
         $this->cantidad = $producto->cantidad;
         $this->precio = $producto->precio;
-        $this->abrirModal();
+        $this->abrirModalE();
     } 
 
     public function update(){
@@ -54,7 +63,7 @@ public $modal =false;//cierre modal
                 'precio' =>$this->precio   
             ]);
         }
-        $this->cerrarModal();
+        $this->cerrarModalE();
         $this->limpiar();
     }
 
